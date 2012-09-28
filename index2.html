@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Week2_Homework</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="author" content="The Chopping Block, Inc." />
+	<meta name="geo.country" content="US" />
+	<meta name="dc.language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	
+	<style type="text/css" media="screen">		
+
+.center
+{
+margin:auto;
+background-color:#CCCCCC;
+font-family:Arial,Trebuchet,Sans Serif;
+font-size:11px;
+text-align:center
+}
+</style>
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="center" >
+		<h1>Rock, Paper, Scissors ... 1, 2, 3</h1>
+<p>	
+Pick one:	
+<BR>		<img id="rock" src="rock1.jpg" height="150" width="*">
+		<img id="paper" src="paper.jpg" height="150" width="*">
+		<img id="scissors" src="scissors.jpg" height="150" width="*">
+</p>
+	<p>
+		<span id="cpick" ></span>
+	<br>	<img id="compchoice" src="" height="150" width="*" >
+	</p>
+
+
+	<P>
+		<span id="winner" ></span>
+</p>
+	</div>
+
+
+
+	<script type="text/javascript" charset="utf-8">
+		
+		var rock = document.getElementById('rock');
+		var paper = document.getElementById('paper');
+		var scissors = document.getElementById('scissors');
+
+		var compchoice = document.getElementById('compchoice');
+		var click = document.getElementById('click');
+		var winner = document.getElementById('winner');
+
+		var usernumber;
+		var compnumber;
+		var compnumber = function randomRange(min, max){;
+			return (Math.floor((Math.random()*(max-min)) + min)); 
+		}
+
+
+		var win1 = "You win!";
+		var win2 = "Computer wins!";
+		var tie = "It's a tie!";
+		
+
+//
+
+
+
+		rock.onclick = function(e){
+			usernumber = 1;
+		var cd = compnumber(1,4);
+		cpick.innerHTML = "Computer picks:"
+
+		if (cd == 1){
+			compchoice.src = "rock1.jpg";
+		}
+
+		else if (cd == 2){
+			compchoice.src = "paper.jpg";
+		}
+		else if (cd == 3){
+			compchoice.src = "scissors.jpg";
+		}
+		
+
+		if (cd == usernumber){
+			winner.innerHTML = tie;
+		}
+
+		else if (cd == 1 && usernumber == 2){
+			winner.innerHTML = win1;
+		}
+		else if (cd == 2 && usernumber == 3){
+			winner.innerHTML = win1;
+		}
+		else if (cd == 3 && usernumber == 1){
+			winner.innerHTML = win1;
+		}
+
+		else if (cd == 2 && usernumber == 1){
+			winner.innerHTML = win2;
+		}
+		else if (cd == 3 && usernumber == 2){
+			winner.innerHTML = win2;
+		}
+		else if (cd == 1 && usernumber == 3){
+			winner.innerHTML = win2;
+		}
+
+
+		};
+
+//
+
+		paper.onclick = function(e){;
+			usernumber = 2;
+		var cd = compnumber(1,4);
+
+		cpick.innerHTML = "Computer picks:"
+		if (cd == 1){
+			compchoice.src = "rock1.jpg";
+		}
+
+		else if (cd == 2){
+			compchoice.src = "paper.jpg";
+		}
+		else if (cd == 3){
+			compchoice.src = "scissors.jpg";
+		}
+		
+
+		if (cd == usernumber){
+			winner.innerHTML = tie;
+		}
+
+		else if (cd == 1 && usernumber == 2){
+			winner.innerHTML = win1;
+		}
+		else if (cd == 2 && usernumber == 3){
+			winner.innerHTML = win1;
+		}
+		else if (cd == 3 && usernumber == 1){
+			winner.innerHTML = win1;
+		}
+
+		else if (cd == 2 && usernumber == 1){
+			winner.innerHTML = win2;
+		}
+		else if (cd == 3 && usernumber == 2){
+			winner.innerHTML = win2;
+		}
+		else if (cd == 1 && usernumber == 3){
+			winner.innerHTML = win2;
+		}
+
+
+		};
+
+//
+
+
+		scissors.onclick = function(e){;
+			usernumber = 3;
+		var cd = compnumber(1,4);
+
+		cpick.innerHTML = "Computer picks:"
+		if (cd == 1){
+			compchoice.src = "rock1.jpg";
+		}
+
+		else if (cd == 2){
+			compchoice.src = "paper.jpg";
+		}
+		else if (cd == 3){
+			compchoice.src = "scissors.jpg";
+		}
+		
+
+		if (cd == usernumber){
+			winner.innerHTML = tie;
+		}
+
+		else if (cd == 1 && usernumber == 2){
+			winner.innerHTML = win1;
+		}
+		else if (cd == 2 && usernumber == 3){
+			winner.innerHTML = win1;
+		}
+		else if (cd == 3 && usernumber == 1){
+			winner.innerHTML = win1;
+		}
+
+		else if (cd == 2 && usernumber == 1){
+			winner.innerHTML = win2;
+		}
+		else if (cd == 3 && usernumber == 2){
+			winner.innerHTML = win2;
+		}
+		else if (cd == 1 && usernumber == 3){
+			winner.innerHTML = win2;
+		}
+
+		};
+
+
+
+		
+		
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
